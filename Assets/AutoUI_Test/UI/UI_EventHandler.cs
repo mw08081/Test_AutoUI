@@ -7,6 +7,24 @@ using UnityEngine.EventSystems;
 
 public class UI_EventHandler : MonoBehaviour, IPointerClickHandler, IDragHandler
 {
+    #region Kinds of Event 
+    public enum UIEvent
+    {
+        Click,
+        Drag,
+    }
+    public enum MouseEvent
+    {
+        Press,
+        Click,
+    }
+
+    public enum CameraMode
+    {
+        QuarterView,
+    }
+    #endregion
+
     public Action<PointerEventData> OnClickHandler = null;
     public Action<PointerEventData> OnDragHandler = null;
 

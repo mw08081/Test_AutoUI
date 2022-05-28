@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        isMainCam = true;    
+        isMainCam = true;
+
+        UIManager.ManagePopupUI<UI_PopUp>(UIManager.UIType.Static, "UI_Static");
     }
 
     void Update()
@@ -37,6 +39,11 @@ public class GameManager : MonoBehaviour
 
                 isMainCam = true;
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            UIManager.ManagePopupUI<UI_PopUp>(UIManager.UIType.Page, "UI_Button");
         }
     }
 }
